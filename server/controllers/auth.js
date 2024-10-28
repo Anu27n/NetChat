@@ -1,6 +1,6 @@
 const { connect } = require('getstream');
 const bcrypt = require('bcrypt');
-const { StreamChat } = require('stream-chat').StreamChat;
+const { StreamChat } = require('stream-chat');
 const crypto = require('crypto');
 
 require('dotenv').config();
@@ -23,7 +23,7 @@ const signup = async (req, res) => {
 
         res.status(200).json({ token, fullName, username, userId, hashedPassword, phoneNumber });
     } catch (error) {
-        console.log(error);
+        console.error('Signup error:', error);
         res.status(500).json({ message: "Server Error" });
     }
 };
@@ -49,7 +49,7 @@ const login = async (req, res) => {
             res.status(500).json({ message: "Incorrect password" });
         }
     } catch (error) {
-        console.log(error);
+        console.error('Login error:', error);
         res.status(500).json({ message: "Server Error" });
     }
 };
