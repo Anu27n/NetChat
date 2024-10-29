@@ -2,14 +2,14 @@ import React from 'react';
 import { ChannelList, useChatContext } from 'stream-chat-react';
 import Cookies from 'universal-cookie';
 
-import ChannelSearch from './ChannelSearch'; // Correct import path
+import ChannelSearch from './ChannelSearch';
 import { TeamChannelList, TeamChannelPreview } from './';
 import HospitalIcon from '../assets/hospital.png';
 import LogoutIcon from '../assets/logout.png';
 
 const cookies = new Cookies();
 
-const SideBar = ({logout}) => (
+const SideBar = ({ logout }) => (
     <div className="channel-list__sidebar">
         <div className="channel-list__sidebar__icon1">
             <div className="icon1__inner">
@@ -41,47 +41,45 @@ const ChannelListContainer = () => {
         cookies.remove('phoneNumber');
 
         window.location.reload();
-        
-    }
+    };
+
     return (
         <div className="channel-list__container">
-            <SideBar logout={logout}/>
+            <SideBar logout={logout} />
             <div className="channel-list__list__wrapper">
                 <CompanyHeader />
                 <ChannelSearch />
-                <ChannelList 
+                <ChannelList
                     filters={{}}
                     channelRenderFilterFn={() => {}}
                     List={(listProps) => (
-                        <TeamChannelList 
+                        <TeamChannelList
                             {...listProps}
                             type="team"
                         />
                     )}
                     Preview={(previewProps) => (
-                        <TeamChannelPreview 
+                        <TeamChannelPreview
                             {...previewProps}
                             type="team"
                         />
                     )}
-                    
                 />
-                <ChannelList 
+                <ChannelList
                     filters={{}}
                     channelRenderFilterFn={() => {}}
                     List={(listProps) => (
-                        <TeamChannelList 
+                        <TeamChannelList
                             {...listProps}
                             type="messaging"
                         />
                     )}
                     Preview={(previewProps) => (
-                        <TeamChannelPreview 
+                        <TeamChannelPreview
                             {...previewProps}
-                            type=" messaging"
+                            type="messaging"
                         />
                     )}
-                    
                 />
             </div>
         </div>
