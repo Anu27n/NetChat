@@ -33,38 +33,13 @@
 <img src="https://img.shields.io/badge/git%20-%23121011.svg?&style=for-the-badge&logo=git&logoColor=green"/> 
 <img src="https://img.shields.io/badge/VS%20Code-0078d7.svg?&style=for-the-badge&logo=visual-studio-code&logoColor=white"/>
 </span>
-- **Frontend:** HTML, CSS, JavaScript, React.
-- **Backend:** Node.js, Express.
-- **Real-time Messaging:** Stream API.
-- **SMS Notifications:** Twilio.
-- **Version Control:** Git and GitHub.
-- **Hosting:** Netlify (frontend) and Render (backend).
-- **Code Editor:** VS Code.
-- **Analytics:** Google Analytics.
-- **CSS Methodology:** BEM (Block Element Modifier).
 
+]
 <br />
 
 <h3 align="center">✨ Welcome to NetChat ✨ </h3> <hr>
 
-# Table of Contents
-<details>
-  <summary>Click to expand</summary>
-  
-  - [Overview](#overview)
-  - [Problem and Solution](#problem-and-solution)
-  - [Key Features](#key-features)
-  - [Advanced Concepts Implemented](#advanced-concepts-implemented)
-  - [Dependencies Used](#dependencies-used)
-  - [API & Services](#api--services)
-  - [Usage Notes](#usage-notes)
-  - [Security and User Management](#security-and-user-management)
-  - [Installation](#installation)
-  - [Contributing](#contributing)
-  - [License](#license)
-  - [Acknowledgements](#acknowledgements)
-  
-</details> 
+
 
 ## Overview🔨
 NetChat is a social chatting service designed to facilitate seamless communication among users. With features that combine the best of modern messaging apps, it allows individuals to connect, share, and engage in real-time conversations, ensuring that no message goes unnoticed.
@@ -78,7 +53,7 @@ In today's fast-paced digital world, efficient communication is crucial. However
 2. **Poor User Experience:** Many platforms can be cumbersome, leading to frustration in communication.
 3. **Fragmented Communication:** Users frequently switch between multiple apps to connect with friends, leading to disorganization.
 
-### Our Solution
+### Solution
 NetChat addresses these challenges by providing:
 
 1. **Robust Infrastructure:** Ensures reliable messaging, even in low connectivity areas.
@@ -176,38 +151,93 @@ We've implemented strict rules for managing users across all types of chats in N
    cd NetChat
 Install all dependencies:
 
-2.Navigate to the server directory and install dependencies:
+2. **Install dependencies**:
+    
 bash
-Copy code
-cd server
-npm install
-Then, navigate to the client directory and install dependencies:
+    npm install
+
+    
+3. **Start the development server**:
+    
 bash
-Copy code
-cd ../client
-npm install
-Setup environment variables:
+    npm start
 
-Create a .env file in the server directory with the necessary API keys and configurations.
-Start the backend server:
+can also refer client's README.md file for more details.
+ 
+   ### Backend setup: 
 
+1. **Navigate to the server directory**:
+    
 bash
-Copy code
-cd server
-nodemon index.js
-Start the frontend application:
+    cd ../server
 
+
+2. **Install dependencies**:
+    
 bash
-Copy code
-cd ../client
-npm start
-Visit the app in your browser:
+    npm install
 
-Open http://localhost:3000 in your web browser.
-csharp
-Copy code
 
-You can copy this entire section into your `README.md` file as is. If you have any more reque
+3. **Set up environment variables**:
+   Open the client/src/App.js and client/src/Components/Auth.js files and replace the placeholders with your actual API keys and tokens:
+    Create a .env file in the root directory of the server folder and add the following variables:
+    
+plaintext
+     STREAM_APP_ID=your_stream_app_id
+    STREAM_API_SECRET=your_stream_api_secret
+    STREAM_API_KEY=your_stream_api_key
+    TWILIO_ACCOUNT_SID=your_twilio_account_sid
+    TWILIO_AUTH_TOKEN=your_twilio_auth_token
+    TWILIO_MESSAGING_SERVICE_SID=your_twilio_messaging_service_sid
+
+   Replace your_* with your actual API keys and tokens.
+
+4. **Start the backend server**:
+    
+bash
+    npm start
+    npm run dev
+
+   
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## Contributing🤝
+
+We welcome contributions to improve MedicalPager! Here's how you can contribute:
+
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix:
+    
+bash
+    git checkout -b feature/AmazingFeature
+
+3. Commit your changes and push to the branch:
+    
+bash
+    git commit -m 'Add some AmazingFeature'
+    git push origin feature/AmazingFeature
+
+4. Open a Pull Request with a detailed description of your changes.
+5. Voila ❗ You have made a PR to this awesome projects💥. Wait for your submission to be accepted and your PR to be merged.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Acknowledgements
+
+Quite a lot of the code in this repo came from [GetStream](https://getstream.io/).
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<hr>
+
+<div align="center">
+Made with ❤️ 
+</div>
+
+
 
 
   
