@@ -1,70 +1,176 @@
-# Getting Started with Create React App
+<a name="readme-top"></a>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<div align="center">
+<img width="200px" src="client/public/favicon_io/android-chrome-192x192.png" alt="NetChat Logo">
+</div>
 
-## Available Scripts
+<h1 align="center"> NetChat <br/> <span style="font-size:10px;">A Social Chatting Service</span></h1>
 
-In the project directory, you can run:
+<div align="center">
 
-### `npm start`
+![Badge](https://img.shields.io/badge/API-Stream-green)
+![Badge](https://img.shields.io/badge/Analytics-Google_Analytics-orange)
+![Badge](https://img.shields.io/badge/CSS-BEM-lightgrey)
+![Badge](https://img.shields.io/badge/SMS-Twilio-red)
+![Badge](https://img.shields.io/badge/LICENSE-MIT-purple)
+![Badge](https://img.shields.io/badge/Version-1.0-yellow)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+</div>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Tech Stack and tools:
+<span>
+<img src="https://img.shields.io/badge/html5%20-%23E34F26.svg?&style=for-the-badge&logo=html5&logoColor=white"/> 
+<img src="https://img.shields.io/badge/css3%20-%231572B6.svg?&style=for-the-badge&logo=css3&logoColor=white"/>
+<img src="https://img.shields.io/badge/react%20-%2320232a.svg?&style=for-the-badge&logo=react&logoColor=%2361DAFB"/>
+<img src="https://img.shields.io/badge/express%20-%23E34F26.svg?&style=for-the-badge&logo=express&logoColor=white"/>
+<img src="https://img.shields.io/badge/node.js%20-%2343853D.svg?&style=for-the-badge&logo=node.js&logoColor=white"/> 
+<img src="https://img.shields.io/badge/javascript%20-%23323330.svg?&style=for-the-badge&logo=javascript&logoColor=%23F7DF1E"/> 
+<img src="https://img.shields.io/badge/render%20-%2300A8E8.svg?&style=for-the-badge&logo=render&logoColor=white"/>
+<img src="https://img.shields.io/badge/stream%20-%23FF0000.svg?&style=for-the-badge&logo=stream&logoColor=white"/> 
+<img src="https://img.shields.io/badge/twilio%20-%23F22F46.svg?&style=for-the-badge&logo=twilio&logoColor=white"/>
+<img src="https://img.shields.io/badge/github%20-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white"/>
+<img src="https://img.shields.io/badge/netlify%20-%2300C7B7.svg?&style=for-the-badge&logo=netlify&logoColor=white"/>
+<img src="https://img.shields.io/badge/git%20-%23121011.svg?&style=for-the-badge&logo=git&logoColor=green"/> 
+<img src="https://img.shields.io/badge/VS%20Code-0078d7.svg?&style=for-the-badge&logo=visual-studio-code&logoColor=white"/>
+</span>
+- **Frontend:** HTML, CSS, JavaScript, React.
+- **Backend:** Node.js, Express.
+- **Real-time Messaging:** Stream API.
+- **SMS Notifications:** Twilio.
+- **Version Control:** Git and GitHub.
+- **Hosting:** Netlify (frontend) and Render (backend).
+- **Code Editor:** VS Code.
+- **Analytics:** Google Analytics.
+- **CSS Methodology:** BEM (Block Element Modifier).
 
-### `npm test`
+<br />
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<h3 align="center">✨ Welcome to NetChat ✨ </h3> <hr>
 
-### `npm run build`
+# Table of Contents
+<details>
+  <summary>Click to expand</summary>
+  
+  - [Overview](#overview)
+  - [Problem and Solution](#problem-and-solution)
+  - [Key Features](#key-features)
+  - [Advanced Concepts Implemented](#advanced-concepts-implemented)
+  - [Dependencies Used](#dependencies-used)
+  - [API & Services](#api--services)
+  - [Usage Notes](#usage-notes)
+  - [Security and User Management](#security-and-user-management)
+  - [Installation](#installation)
+  - [Contributing](#contributing)
+  - [License](#license)
+  - [Acknowledgements](#acknowledgements)
+  
+</details> 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Overview🔨
+NetChat is a social chatting service designed to facilitate seamless communication among users. With features that combine the best of modern messaging apps, it allows individuals to connect, share, and engage in real-time conversations, ensuring that no message goes unnoticed.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Problem and Solution
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### The Problem🆘
+In today's fast-paced digital world, efficient communication is crucial. However, many existing chat applications suffer from issues such as:
 
-### `npm run eject`
+1. **Limited Functionality:** Traditional messaging apps often lack advanced features for sharing media and engaging with others.
+2. **Poor User Experience:** Many platforms can be cumbersome, leading to frustration in communication.
+3. **Fragmented Communication:** Users frequently switch between multiple apps to connect with friends, leading to disorganization.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Our Solution
+NetChat addresses these challenges by providing:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. **Robust Infrastructure:** Ensures reliable messaging, even in low connectivity areas.
+2. **Feature-Rich Experience:** Offers direct and group chats, multimedia sharing, and threaded conversations.
+3. **User Engagement:** Encourages interaction through notifications, mentions, and integrations with popular services like Giphy and YouTube.
+4. **Unified Communication:** Combines multiple messaging functionalities into one streamlined platform.
+5. **Mobile Accessibility:** Users can access their chats on-the-go, ensuring they never miss an important message.
+6. **Intuitive UI:** Designed for easy navigation, making it suitable for all users, regardless of technical skill.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+<div align="center">
+<img src="c1.JPG" alt="NetChat dashboard">
+</div>
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+!["Chat interface"](gif1.gif) 
+!["Chat interface with mentions"](gif2.gif)
 
-## Learn More
+## Key Features:
+- Secure user authentication and management.
+- Direct messaging and group chat functionalities.
+- Multimedia support including GIFs, images, and videos.
+- Real-time notifications for messages and updates.
+- Message editing and deletion capabilities.
+- Threaded replies for better conversation management.
+- Giphy integration for fun and engaging chats.
+- Search functionality for easy navigation.
+- Fully responsive design for all devices.
+- Twilio integration for SMS notifications.
+- Upload local files directly within the chat.
+- Mentions to tag specific users in conversations.
+- Webhooks for enhanced notifications and integrations.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Advanced Concepts Implemented🧠
+- Efficient folder and file structure.
+- React Context API for state management.
+- Integration with Stream API for scalable chat infrastructure.
+- Custom hooks for reusable logic and more.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### Code Splitting
+## Dependencies used🖥️
+- [x] React (for building user interfaces)
+- [x] Stream Chat React (for chat functionality)
+- [x] Universal Cookie (for cookie management)
+- [x] Axios (for API calls)
+- [x] Stream Chat (for chat infrastructure)
+- [x] Express (web application framework)
+- [x] Twilio (for SMS notifications)
+- [x] bcrypt (for password hashing)
+- [x] cors (for enabling CORS)
+- [x] dotenv (for environment variable management)
+- [x] crypto (for cryptographic functionality)
+- [x] nodemon (for auto-restarting the server during development)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### API & Services
+- [x] Stream API (for real-time messaging)
+- [x] Twilio API (for SMS services)
+- [x] Google Analytics (for user interaction tracking)
 
-### Analyzing the Bundle Size
+## Usage Notes
+1. If you encounter any errors during sign-in or sign-up, please refresh the page and try again.
+2. When setting up your profile, you need to provide a URL for your avatar (profile picture).
+3. To use GIFs in your messages, type `/giphy [keyword]` (e.g., `/giphy hello` to find a "hello" GIF).
+4. To mention a specific user in a chat, type `@username`.
+5. You need to have an account with Twilio for SMS messaging.
+6. The project code includes various comments that clarify functionality and increase readability. These comments can be useful for understanding the code's structure and logic.
+7. For more information, access the full project demo video on Google Drive [here](https://drive.google.com/drive/folders/1t4ZaA0Z9sn59LwjCKvfuHerGs8eDd8oa?usp=drive_link).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### Making a Progressive Web App
+## Security and User Management
+We've implemented strict rules for managing users across all types of chats in NetChat to ensure security and proper access control:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+* **Automatic Memberships:**
+   * Users cannot leave or be removed from chats they were automatically added to.
 
-### Advanced Configuration
+* **Private Conversations:**
+   * Members cannot leave or be removed from their private conversations (DMs).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+* **Administrative Control:**
+   * Administrators have the highest level of control and can manage most user access.
 
-### Deployment
+* **Department-Specific:**
+   * Members can only access chats that are directly relevant to their specific department.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+* **User Engagement:**
+   * Users receive automatic notifications for updates related to their chats.
 
-### `npm run build` fails to minify
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Installation🛠️
+### For Local Development:
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/yourusername/NetChat.git
+   cd NetChat
