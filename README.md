@@ -138,82 +138,73 @@ We've implemented strict rules for managing users across all types of chats in N
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## Installation🛠️
-### For Local Development:
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/yourusername/NetChat.git
-   cd NetChat
-Install all dependencies:
+# Installation Instructions
 
-2. **Install dependencies**:
-    
-bash
+## Frontend Setup
+
+1. **Install dependencies**:
+    ```bash
     npm install
+    ```
 
-    
-3. **Start the development server**:
-    
-bash
+2. **Start the development server**:
+    ```bash
     npm start
+    ```
 
-can also refer client's README.md file for more details.
- 
-   ### Backend setup: 
+   You can also refer to the client's README.md file for more details.
+
+## Backend Setup
 
 1. **Navigate to the server directory**:
-    
-bash
+    ```bash
     cd ../server
-
+    ```
 
 2. **Install dependencies**:
-    
-bash
+    ```bash
     npm install
-
+    ```
 
 3. **Set up environment variables**:
-   Open the client/src/App.js and client/src/Components/Auth.js files and replace the placeholders with your actual API keys and tokens:
-    Create a .env file in the root directory of the server folder and add the following variables:
-    
-plaintext
-     STREAM_APP_ID=your_stream_app_id
+   - Open the `client/src/App.js` and `client/src/Components/Auth.js` files and replace the placeholders with your actual API keys and tokens.
+   - Create a `.env` file in the root directory of the server folder and add the following variables:
+    ```plaintext
+    STREAM_APP_ID=your_stream_app_id
     STREAM_API_SECRET=your_stream_api_secret
     STREAM_API_KEY=your_stream_api_key
     TWILIO_ACCOUNT_SID=your_twilio_account_sid
     TWILIO_AUTH_TOKEN=your_twilio_auth_token
     TWILIO_MESSAGING_SERVICE_SID=your_twilio_messaging_service_sid
-
-   Replace your_* with your actual API keys and tokens.
+    ```
+   Replace `your_*` with your actual API keys and tokens.
 
 4. **Start the backend server**:
-    
-bash
+    ```bash
     npm start
     npm run dev
+    ```
 
-   
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## Contributing🤝
+## Contributing 🤝
 
 We welcome contributions to improve NetChat! Here's how you can contribute:
 
-1. Fork the repository.
-2. Create a new branch for your feature or bug fix:
-    
-bash
+1. **Fork the repository.**
+2. **Create a new branch for your feature or bug fix**:
+    ```bash
     git checkout -b feature/AmazingFeature
+    ```
 
-3. Commit your changes and push to the branch:
-    
-bash
+3. **Commit your changes and push to the branch**:
+    ```bash
     git commit -m 'Add some AmazingFeature'
     git push origin feature/AmazingFeature
+    ```
 
-4. Open a Pull Request with a detailed description of your changes.
-5. Voila ❗ You have made a PR to this awesome projects💥. Wait for your submission to be accepted and your PR to be merged.
+4. **Open a Pull Request** with a detailed description of your changes.
+5. Voila! ❗ You have made a PR to this awesome project 💥. Wait for your submission to be accepted and your PR to be merged.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -223,16 +214,11 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Acknowledgements
 
-Quite a lot of the code in this repo came from [GetStream](https://getstream.io/).
+A significant portion of the code in this repository came from [GetStream](https://getstream.io/).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 <hr>
 
 <div align="center">
-Made with ❤️ 
+    Made with ❤️
 </div>
-
-
-
-
-  
