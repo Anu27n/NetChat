@@ -85,6 +85,7 @@ NetChat is a social chatting service designed to facilitate seamless communicati
 - [x] Stream API (for real-time messaging)
 - [x] Twilio API (for SMS services)
 - [x] Google Analytics (for user interaction tracking)
+- [x] Backend Server:https://netchat-backend1.onrender.com/  
 
 ## Usage Notes
 1. If you encounter any errors during sign-in or sign-up, please refresh the page and try again.
