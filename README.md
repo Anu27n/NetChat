@@ -10,7 +10,6 @@
 
 ![Badge](https://img.shields.io/badge/API-Stream-green)
 ![Badge](https://img.shields.io/badge/Analytics-Google_Analytics-orange)
-![Badge](https://img.shields.io/badge/CSS-BEM-lightgrey)
 ![Badge](https://img.shields.io/badge/SMS-Twilio-red)
 ![Badge](https://img.shields.io/badge/LICENSE-MIT-purple)
 ![Badge](https://img.shields.io/badge/Version-1.0-yellow)
