@@ -43,29 +43,7 @@
 ## Overview🔨
 NetChat is a social chatting service designed to facilitate seamless communication among users. With features that combine the best of modern messaging apps, it allows individuals to connect, share, and engage in real-time conversations, ensuring that no message goes unnoticed.
 
-## Problem and Solution
 
-### The Problem🆘
-In today's fast-paced digital world, efficient communication is crucial. However, many existing chat applications suffer from issues such as:
-
-1. **Limited Functionality:** Traditional messaging apps often lack advanced features for sharing media and engaging with others.
-2. **Poor User Experience:** Many platforms can be cumbersome, leading to frustration in communication.
-3. **Fragmented Communication:** Users frequently switch between multiple apps to connect with friends, leading to disorganization.
-
-### Solution
-NetChat addresses these challenges by providing:
-
-1. **Robust Infrastructure:** Ensures reliable messaging, even in low connectivity areas.
-2. **Feature-Rich Experience:** Offers direct and group chats, multimedia sharing, and threaded conversations.
-3. **User Engagement:** Encourages interaction through notifications, mentions, and integrations with popular services like Giphy and YouTube.
-4. **Unified Communication:** Combines multiple messaging functionalities into one streamlined platform.
-5. **Mobile Accessibility:** Users can access their chats on-the-go, ensuring they never miss an important message.
-6. **Intuitive UI:** Designed for easy navigation, making it suitable for all users, regardless of technical skill.
-
-
-
-!["Chat interface"](gif1.gif) 
-!["Chat interface with mentions"](gif2.gif)
 
 ## Key Features:
 - Secure user authentication and management.
@@ -212,11 +190,6 @@ We welcome contributions to improve NetChat! Here's how you can contribute:
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## Acknowledgements
-
-A significant portion of the code in this repository came from [GetStream](https://getstream.io/).
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 <hr>
 
 <div align="center">
