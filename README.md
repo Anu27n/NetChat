@@ -63,9 +63,7 @@ NetChat addresses these challenges by providing:
 5. **Mobile Accessibility:** Users can access their chats on-the-go, ensuring they never miss an important message.
 6. **Intuitive UI:** Designed for easy navigation, making it suitable for all users, regardless of technical skill.
 
-<div align="center">
-<img src="c1.JPG" alt="NetChat dashboard">
-</div>
+
 
 !["Chat interface"](gif1.gif) 
 !["Chat interface with mentions"](gif2.gif)
@@ -118,8 +116,6 @@ NetChat addresses these challenges by providing:
 3. To use GIFs in your messages, type `/giphy [keyword]` (e.g., `/giphy hello` to find a "hello" GIF).
 4. To mention a specific user in a chat, type `@username`.
 5. You need to have an account with Twilio for SMS messaging.
-6. The project code includes various comments that clarify functionality and increase readability. These comments can be useful for understanding the code's structure and logic.
-7. For more information, access the full project demo video on Google Drive [here](https://drive.google.com/drive/folders/1t4ZaA0Z9sn59LwjCKvfuHerGs8eDd8oa?usp=drive_link).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -203,7 +199,7 @@ bash
 
 ## Contributing🤝
 
-We welcome contributions to improve MedicalPager! Here's how you can contribute:
+We welcome contributions to improve NetChat! Here's how you can contribute:
 
 1. Fork the repository.
 2. Create a new branch for your feature or bug fix:
