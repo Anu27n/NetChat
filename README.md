@@ -1,7 +1,7 @@
 <a name="readme-top"></a>
 
 <div align="center">
-<img width="200px" src="client/public/favicon_io/android-chrome-192x192.png" alt="NetChat Logo">
+<img width="200px" src="https://mir-s3-cdn-cf.behance.net/projects/404/4fdd90127219173.Y3JvcCwxOTk5LDE1NjQsMCwyNjI.jpg" alt="NetChat Logo">
 </div>
 
 <h1 align="center"> NetChat <br/> <span style="font-size:10px;">A Social Chatting Service</span></h1>
@@ -174,3 +174,40 @@ We've implemented strict rules for managing users across all types of chats in N
    ```bash
    git clone https://github.com/yourusername/NetChat.git
    cd NetChat
+Install all dependencies:
+
+2.Navigate to the server directory and install dependencies:
+bash
+Copy code
+cd server
+npm install
+Then, navigate to the client directory and install dependencies:
+bash
+Copy code
+cd ../client
+npm install
+Setup environment variables:
+
+Create a .env file in the server directory with the necessary API keys and configurations.
+Start the backend server:
+
+bash
+Copy code
+cd server
+nodemon index.js
+Start the frontend application:
+
+bash
+Copy code
+cd ../client
+npm start
+Visit the app in your browser:
+
+Open http://localhost:3000 in your web browser.
+csharp
+Copy code
+
+You can copy this entire section into your `README.md` file as is. If you have any more reque
+
+
+  
