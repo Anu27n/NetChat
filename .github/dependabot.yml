@@ -1,0 +1,6 @@
+version: 2
+updates:
+  - package-ecosystem: "npm" # For React projects using npm
+    directory: "/" # Root directory of your project
+    schedule:
+      interval: "weekly" # Check for updates weekly
