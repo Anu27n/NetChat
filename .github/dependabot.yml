@@ -1,12 +1,25 @@
 version: 2
 updates:
+  # Configuration for the client
   - package-ecosystem: "npm" # Specifies the package manager
-    directory: "/"          # The location of your package.json file
+    directory: "/client"    # Location of the client package.json file
     schedule:
-      interval: "daily"      # Check for updates daily (can be weekly or monthly)
+      interval: "daily"      # Check for updates daily
     commit-message:
       prefix: "deps"         # Commit message prefix for Dependabot updates
     open-pull-requests-limit: 10
     ignore:
       - dependency-name: "react" # Optional: Ignore specific dependencies
         versions: ["^18.0.0"]
+  
+  # Configuration for the server
+  - package-ecosystem: "npm"
+    directory: "/server"    # Location of the server package.json file
+    schedule:
+      interval: "daily"
+    commit-message:
+      prefix: "deps"
+    open-pull-requests-limit: 10
+    ignore:
+      - dependency-name: "express" # Example of ignored dependency for the server
+        versions: ["^5.0.0"]
