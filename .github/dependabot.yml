@@ -1,6 +1,12 @@
 version: 2
 updates:
-  - package-ecosystem: "npm" # For React projects using npm
-    directory: "/" # Root directory of your project
+  - package-ecosystem: "npm" # Specifies the package manager
+    directory: "/"          # The location of your package.json file
     schedule:
-      interval: "weekly" # Check for updates weekly
+      interval: "daily"      # Check for updates daily (can be weekly or monthly)
+    commit-message:
+      prefix: "deps"         # Commit message prefix for Dependabot updates
+    open-pull-requests-limit: 10
+    ignore:
+      - dependency-name: "react" # Optional: Ignore specific dependencies
+        versions: ["^18.0.0"]
