@@ -10,7 +10,17 @@ const PORT = process.env.PORT || 5000;
 const accountSid = process.env.TWILIO_ACCOUNT_SID;
 const authToken = process.env.TWILIO_AUTH_TOKEN;
 const messagingServiceSid = process.env.TWILIO_MESSAGING_SERVICE_SID;
-const twilioclient = require('twilio')(accountSid, authToken);
+// Initialize Twilio client only if credentials are present
+let twilioClient = null;
+if (accountSid && authToken) {
+    try {
+        twilioClient = require('twilio')(accountSid, authToken);
+    } catch (e) {
+        console.warn('Twilio client could not be initialized:', e?.message || e);
+    }
+} else {
+    console.warn('Twilio credentials not found. SMS notifications are disabled.');
+}
 
 app.use(cors());
 app.use(express.json());
@@ -23,8 +33,13 @@ app.get('/', (req, res) => {
 app.post('/', (req, res) => {
     const { message, user: sender, type, channelUrl } = req.body;
 
+    // If Twilio is not configured, acknowledge without sending SMS
+    if (!twilioClient) {
+        return res.status(200).send('Twilio not configured');
+    }
+
     if (type === 'message.new') {
-        client.messages
+        twilioClient.messages
             .create({
                 body: `New message from ${sender}: ${message}`,
                 from: process.env.TWILIO_PHONE_NUMBER,
@@ -38,7 +53,7 @@ app.post('/', (req, res) => {
                 res.status(500).send('Failed to send message');
             });
     } else if (type === 'message.updated') {
-        client.messages
+        twilioClient.messages
             .create({
                 body: `Updated message from ${sender}: ${message}`,
                 from: process.env.TWILIO_PHONE_NUMBER,

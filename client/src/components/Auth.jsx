@@ -28,9 +28,11 @@ const Auth = () => {
         
         const { username, password, phoneNumber, avatarURL} = form;
 
-        const URL = 'https://netchat-backend1.onrender.com/auth';
+    // Prefer env-configured API URL; fallback to CRA proxy via relative path
+    const base = process.env.REACT_APP_API_URL || '';
+    const URL = `${base}/auth`;
 
-        const { data:{token, userId, hashedPassword, fullName} } = await axios.post(`${URL}/${isSignup ? 'signup' : 'login'}`, {
+    const { data:{token, userId, hashedPassword, fullName} } = await axios.post(`${URL}/${isSignup ? 'signup' : 'login'}`, {
              username, password, fullName:form.fullName, phoneNumber, avatarURL,
         });
 
