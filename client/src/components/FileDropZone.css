@@ -1,0 +1,270 @@
+.file-drop-zone {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+.file-drop-zone.drag-active {
+    background: rgba(0, 95, 255, 0.05);
+}
+
+.drop-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 95, 255, 0.95);
+    backdrop-filter: blur(8px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    animation: dropOverlayIn 0.3s ease;
+}
+
+@keyframes dropOverlayIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.drop-content {
+    text-align: center;
+    color: white;
+    animation: dropContentIn 0.5s ease 0.1s both;
+}
+
+@keyframes dropContentIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.drop-icon {
+    font-size: 64px;
+    margin-bottom: 16px;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+.drop-text {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.drop-hint {
+    font-size: 16px;
+    opacity: 0.9;
+}
+
+.upload-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(8px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1001;
+    animation: uploadOverlayIn 0.3s ease;
+}
+
+[data-theme="dark"] .upload-overlay {
+    background: rgba(44, 44, 48, 0.95);
+}
+
+@keyframes uploadOverlayIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.upload-content {
+    text-align: center;
+    color: var(--text-color, #2c2c30);
+    animation: uploadContentIn 0.5s ease 0.1s both;
+}
+
+@keyframes uploadContentIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.upload-icon {
+    font-size: 48px;
+    margin-bottom: 16px;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.upload-text {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    color: var(--text-color, #2c2c30);
+}
+
+.upload-progress {
+    width: 200px;
+    height: 6px;
+    background: var(--border-color, #e1e5e9);
+    border-radius: 3px;
+    overflow: hidden;
+    margin: 0 auto 8px;
+}
+
+.upload-progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, #00d084, #00b8d4);
+    border-radius: 3px;
+    transition: width 0.3s ease;
+    animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -200px 0;
+    }
+    100% {
+        background-position: 200px 0;
+    }
+}
+
+.upload-percentage {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--primary-color, #005fff);
+}
+
+/* File preview styles for dropped files */
+.file-preview {
+    position: relative;
+    display: inline-block;
+    margin: 4px;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 2px solid var(--border-color, #e1e5e9);
+    background: var(--surface-color, #f8f9fa);
+}
+
+.file-preview-image {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    display: block;
+}
+
+.file-preview-info {
+    padding: 8px;
+    text-align: center;
+}
+
+.file-preview-name {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--text-color, #2c2c30);
+    margin-bottom: 4px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 80px;
+}
+
+.file-preview-size {
+    font-size: 10px;
+    color: var(--text-color-secondary, #858688);
+}
+
+.file-preview-remove {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    width: 20px;
+    height: 20px;
+    border: none;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    color: #666;
+    transition: all 0.2s ease;
+}
+
+.file-preview-remove:hover {
+    background: #ff4444;
+    color: white;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .drop-icon {
+        font-size: 48px;
+    }
+    
+    .drop-text {
+        font-size: 20px;
+    }
+    
+    .drop-hint {
+        font-size: 14px;
+    }
+    
+    .upload-icon {
+        font-size: 36px;
+    }
+    
+    .upload-text {
+        font-size: 18px;
+    }
+    
+    .upload-progress {
+        width: 150px;
+    }
+}

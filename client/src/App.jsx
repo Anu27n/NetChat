@@ -7,6 +7,15 @@ import { ChannelListContainer, ChannelContainer, Auth } from './components';
 
 import 'stream-chat-react/dist/css/v2/index.css';
 import './App.css';
+import './components/ThemeToggle.css';
+import './components/OnlineStatus.css';
+import './components/EnhancedSearch.css';
+import './components/MessageReactions.css';
+import './components/FileDropZone.css';
+import './components/TypingIndicator.css';
+import './components/QuickReplies.css';
+import './components/EnhancedMessageInput.css';
+import './components/NotificationCenter.css';
 
 const cookies = new Cookies();
 

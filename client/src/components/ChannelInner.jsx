@@ -2,12 +2,14 @@ import React, { useState } from 'react';
 import { MessageList, MessageInput, Thread, Window, useChannelActionContext, Avatar, useChannelStateContext, useChatContext } from 'stream-chat-react';
 
 import { ChannelInfo } from '../assets';
+import { OnlineStatus, FileDropZone, TypingIndicator, useTypingIndicator, EnhancedMessageInput } from './';
 
 export const GiphyContext = React.createContext({});
 
 const ChannelInner = ({ setIsEditing }) => {
   const [giphyState, setGiphyState] = useState(false);
   const { sendMessage } = useChannelActionContext();
+  const { startTyping, stopTyping } = useTypingIndicator();
   
   const overrideSubmitHandler = (message) => {
     let updatedMessage = {
@@ -25,19 +27,35 @@ const ChannelInner = ({ setIsEditing }) => {
     if (sendMessage) {
       sendMessage(updatedMessage);
       setGiphyState(false);
+      stopTyping();
     }
+  };
+
+  const handleInputChange = () => {
+    startTyping();
+  };
+
+  const handleInputBlur = () => {
+    stopTyping();
   };
 
   return (
     <GiphyContext.Provider value={{ giphyState, setGiphyState }}>
-      <div style={{ display: 'flex', width: '100%' }}>
-        <Window>
-          <TeamChannelHeader setIsEditing={setIsEditing} />
-          <MessageList />
-          <MessageInput overrideSubmitHandler={overrideSubmitHandler} />
-        </Window>
-        <Thread />
-      </div>
+      <FileDropZone>
+        <div style={{ display: 'flex', width: '100%' }}>
+          <Window>
+            <TeamChannelHeader setIsEditing={setIsEditing} />
+            <MessageList />
+            <TypingIndicator />
+            <EnhancedMessageInput 
+              overrideSubmitHandler={overrideSubmitHandler}
+              onInputChange={handleInputChange}
+              onBlur={handleInputBlur}
+            />
+          </Window>
+          <Thread />
+        </div>
+      </FileDropZone>
     </GiphyContext.Provider>
   );
 };
@@ -55,7 +73,12 @@ const TeamChannelHeader = ({ setIsEditing }) => {
           <div className='team-channel-header__name-wrapper'>
             {members.map(({ user }, i) => (
               <div key={i} className='team-channel-header__name-multi'>
-                <Avatar image={user.image} name={user.fullName || user.id} size={32} />
+                <div style={{ position: 'relative' }}>
+                  <Avatar image={user.image} name={user.fullName || user.id} size={32} />
+                  <div style={{ position: 'absolute', bottom: -2, right: -2 }}>
+                    <OnlineStatus isOnline={user.online} size="small" />
+                  </div>
+                </div>
                 <p className='team-channel-header__name user'>{user.fullName || user.id}</p>
               </div>
             ))}
