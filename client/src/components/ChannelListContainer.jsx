@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { ChannelList, useChatContext } from 'stream-chat-react';
 import Cookies from 'universal-cookie';
 
-import { ChannelSearch, TeamChannelList, TeamChannelPreview, ThemeToggle, EnhancedSearch, NotificationCenter } from './';
+import { ChannelSearch, TeamChannelList, TeamChannelPreview } from './';
 import HospitalIcon from '../assets/hospital.png'
 import LogoutIcon from '../assets/logout.png'
 
@@ -26,10 +26,6 @@ const SideBar = ({ logout }) => (
 const CompanyHeader = () => (
     <div className="channel-list__header">
         <p className="channel-list__header__text">NetChat</p>
-        <div style={{ display: 'flex', alignItems: 'center' }}>
-            <NotificationCenter />
-            <ThemeToggle />
-        </div>
     </div>
 )
 
@@ -64,7 +60,6 @@ const ChannelListContent = ({ isCreating, setIsCreating, setCreateType, setIsEdi
             <div className="channel-list__list__wrapper">
                 <CompanyHeader />
                 <ChannelSearch setToggleContainer={setToggleContainer} />
-                <EnhancedSearch setToggleContainer={setToggleContainer} />
                 <ChannelList 
                     filters={filters}
                     channelRenderFilterFn={customChannelTeamFilter}

@@ -447,11 +447,8 @@ body {
 }
 
 .channel-list__header {
-  padding: 0 16px;
+  padding-left: 16px;
   height: 62px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
 }
 
 .channel-list__header__text {
