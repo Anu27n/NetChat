@@ -741,6 +741,19 @@ body {
   text-align: left;
 }
 
+/* Ensure avatar in user list is properly sized */
+.user-item__name-wrapper .str-chat__avatar {
+  margin-right: 12px;
+  flex-shrink: 0;
+}
+
+.user-item__name-wrapper .str-chat__avatar-image {
+  width: 32px !important;
+  height: 32px !important;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
 .user-item__wrapper p {
   font-family: Helvetica Neue, sans-serif;
   font-size: 14px;
@@ -774,6 +787,16 @@ body {
 
 /*---------------------------------------user-list component end-----------------------------------------------*/
 /*------------------------------------------edit-channel-------------------------------------------------*/
+
+/* Additional avatar styling for create/edit channel dialogs */
+.create-channel__container .user-item__name-wrapper .str-chat__avatar,
+.edit-channel__container .user-item__name-wrapper .str-chat__avatar {
+  width: 32px;
+  height: 32px;
+  margin-right: 12px;
+  flex-shrink: 0;
+}
+
 .edit-channel__container {
   display: flex;
   flex-direction: column;
@@ -1135,8 +1158,33 @@ body {
   font-weight: normal;
 }
 
+/* Avatar images should be visible and properly sized */
 .str-chat__avatar-image img.str-chat__avatar-image--loaded {
-  display: none;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* General avatar container styling */
+.str-chat__avatar {
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.str-chat__avatar-image {
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+/* Ensure avatars don't exceed their container size */
+.str-chat__avatar img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
 }
 
 .str-chat__message-attachment {
