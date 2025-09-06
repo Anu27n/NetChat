@@ -1,0 +1,36 @@
+[build]
+  # Since your React app is in the client folder
+  base = "client"
+  
+  # Build command for Create React App
+  command = "npm run build"
+  
+  # The build output directory for Create React App
+  publish = "build"
+
+# Redirect all routes to index.html for single-page application
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Environment variables for production
+[build.environment]
+  # These will be available as process.env variables in your app
+  REACT_APP_API_URL = "https://netchat-backend1.onrender.com"
+  CI = "false"
+
+# Headers for security and performance
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+# Cache static assets
+[[headers]]
+  for = "/static/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
