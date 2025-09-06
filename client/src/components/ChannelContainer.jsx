@@ -31,12 +31,19 @@ const ChannelContainer = ({ isCreating, setIsCreating, isEditing, setIsEditing, 
 
     return (
         <div className="channel__container">
-            <Channel
-                EmptyStateIndicator={EmptyState}
-                Message={(messageProps, i) => <MessageSimple key={i} {...messageProps} />}
-            >
-                <ChannelInner setIsEditing={setIsEditing} />
-            </Channel>
+            {channel ? (
+                <Channel
+                    EmptyStateIndicator={EmptyState}
+                    Message={(messageProps, i) => <MessageSimple key={i} {...messageProps} />}
+                >
+                    <ChannelInner setIsEditing={setIsEditing} />
+                </Channel>
+            ) : (
+                <div className="channel-empty__container">
+                    <p className="channel-empty__first">Select a channel to start messaging</p>
+                    <p className="channel-empty__second">Choose a channel from the sidebar or create a new one!</p>
+                </div>
+            )}
         </div>
     );
 };

@@ -10,17 +10,14 @@ const ChannelInner = ({ setIsEditing }) => {
   const { sendMessage } = useChannelActionContext();
   
   const overrideSubmitHandler = (message) => {
+    // Only used when giphy is active
     let updatedMessage = {
-      attachments: message.attachments,
-      mentioned_users: message.mentioned_users,
-      parent_id: message.parent?.id,
-      parent: message.parent,
-      text: message.text,
+      text: `/giphy ${message.text}`,
+      attachments: message.attachments || [],
+      mentioned_users: message.mentioned_users || [],
+      parent_id: message.parent?.id || null,
+      parent: message.parent || null,
     };
-    
-    if (giphyState) {
-      updatedMessage = { ...updatedMessage, text: `/giphy ${message.text}` };
-    }
     
     if (sendMessage) {
       sendMessage(updatedMessage);
@@ -34,7 +31,11 @@ const ChannelInner = ({ setIsEditing }) => {
         <Window>
           <TeamChannelHeader setIsEditing={setIsEditing} />
           <MessageList />
-          <MessageInput overrideSubmitHandler={overrideSubmitHandler} />
+          {giphyState ? (
+            <MessageInput overrideSubmitHandler={overrideSubmitHandler} />
+          ) : (
+            <MessageInput />
+          )}
         </Window>
         <Thread />
       </div>

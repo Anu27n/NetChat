@@ -23,7 +23,9 @@ if(authToken) {
         image: cookies.get('avatarURL'),
         hashedPassword: cookies.get('hashedPassword'),
         phoneNumber: cookies.get('phoneNumber'),
-    }, authToken)
+    }, authToken).catch(err => {
+        console.error('Failed to connect user:', err);
+    });
 }
 
 const App = () => {
