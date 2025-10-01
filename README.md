@@ -1,8 +1,4 @@
-<a name="readme-top"></a>
 
-<div align="center">
-<img width="200px" src="https://mir-s3-cdn-cf.behance.net/projects/404/4fdd90127219173.Y3JvcCwxOTk5LDE1NjQsMCwyNjI.jpg" alt="NetChat Logo">
-</div>
 
 <h1 align="center"> NetChat <br/> <span style="font-size:10px;">A Social Chatting Service</span></h1>
 
